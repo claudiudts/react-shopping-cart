@@ -16,6 +16,15 @@ function App() {
 		setCart([...cart, item]);
 	};
 
+	const removeItem = title => {
+		console.log(title);
+		setCart(
+			cart.filter((cartItem) => {
+				return cartItem.title !== title
+			})
+		)
+	}
+
 	return (
 		<div className="App">
 			<Navigation cart={cart} />
